@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .utils import get_price
+import json
 # Create your views here.
 
 def index(request):
@@ -13,5 +14,5 @@ def random(request):
             'pChange': 12
         }
 
-    data = get_price('M&M')
-    return JsonResponse(stock)
+    # data = get_price('M&M')
+    return JsonResponse(json.loads(stock))
