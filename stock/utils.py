@@ -10,7 +10,7 @@ BASE_URL = 'https://www.nseindia.com/'
 
 session = requests.Session()
 session.headers['User-Agent'] = USER_AGENT
-r = session.get(BASE_URL)
+# r = session.get(BASE_URL)
 
 
 def get_price(ticker):
