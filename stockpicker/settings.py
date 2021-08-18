@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'stockpicker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1fcdv6sib7mgv',
+        'USER': 'smorortmbdkwjn',
+        'PASSWORD': 'ecc373af6fd481ff3d009d46ee00e24afc67ac081493d2dc79cd8bc8ee40d175',
+        'HOST': 'ec2-18-211-41-246.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
