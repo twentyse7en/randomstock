@@ -14,4 +14,4 @@ def random(request):
         }
 
     data = get_price('M&M')
-    return JsonResponse(data)
+    return JsonResponse(stock)
