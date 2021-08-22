@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from rest_framework.parsers import JSONParser
@@ -19,7 +21,8 @@ def random(request):
             "pChange": 12
         }
     try:
-        stock_data = Stock.objects.get(name="M_M")
+        index = random.randrange(100, 110)
+        stock_data = Stock.objects.get(id=index)
     except Stock.DoesNotExist:
         return HttpResponse(status=404)
 
