@@ -21,7 +21,8 @@ def random(request):
             "pChange": 12
         }
     try:
-        index = randrange(100, 110)
+        # rough range
+        index = randrange(0, 3000)
         print(index)
         stock_data = Stock.objects.get(id=index)
     except Stock.DoesNotExist:
