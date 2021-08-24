@@ -3,7 +3,7 @@ const PROD = 'https//randomstocknse.herokuapp.com/api/'
 
 export const fetchRandomStock = async () => {
 	const endpoint = 'random/'
-	const resp = await fetch(DEV+endpoint, {
+	const resp = await fetch(PROD+endpoint, {
 		method: 'GET',
 	})
 	if(!resp.ok) {
