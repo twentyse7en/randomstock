@@ -1,10 +1,10 @@
-import StockCard from './components/stockCard/stockCard';
 import './App.css';
+import StockCard from './components/stockCard/stockCard';
 
 function App() {
   return (
     <div className="App">
-	  <StockCard />
+      <StockCard />
     </div>
   );
 }

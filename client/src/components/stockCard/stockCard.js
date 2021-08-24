@@ -1,30 +1,48 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
+import Stock from '../stock/stock';
 import { fetchRandomStock } from '../../utils';
+import loading from '../../assets/hourglass.gif';
 import './style.css';
 
 const StockCard = () => {
+
 	const [stockData, setStockData] = useState({});
-	const updateStock = () => {
-		const result = fetchRandomStock();
-		result.then((res) => {
-			setStockData({
-				quote: res.name,
-				lastPrice: res.last_price,
-				change: Math.round(res.change*100)/100,
-				pChange: Math.round(res.pchange*100)/100
-			})
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState();
+
+	const updateStockHandler = async () => {
+	  setIsLoading(true);
+	try {
+		const result = await fetchRandomStock();
+		setStockData({
+			quote: result.name,
+			lastPrice: result.last_price,
+			change: result.change,
+			pChange: result.pchange
 		})
+	}
+	catch (error) {
+		setError(error.message);
+	}
+	  setIsLoading(false);
 	}
 
 	useEffect(() => {
-		updateStock();
+	  updateStockHandler();
 	}, []);
+
+	let content;
+	if (isLoading) {
+		content = <img src={loading} alt="hourglass"/>;
+	} else if (!isLoading && !error) {
+		content = <Stock value={stockData} updateHandler={updateStockHandler}/>;
+	} else if (!isLoading && error) {
+		content = <p> {error} </p>
+	}
 
 	return (
 		<div className='stock-card'>
-			<h1> {stockData.quote} </h1>
-			<p> {stockData.lastPrice} | {stockData.change} | {stockData.pChange}% </p>
-			<button onClick={() => {updateStock()}} > RANDOM </button>
+			{content}
 		</div>
 	);
 }

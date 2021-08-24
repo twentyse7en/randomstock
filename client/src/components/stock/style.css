@@ -1,0 +1,70 @@
+.stock {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+header {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.stock-info{
+	border-radius: 10px;
+	background-color: #2f4052;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 275px;
+	padding: 35px;
+}
+
+.price-info {
+	text-align: left;
+}
+
+.company-name {
+	font-size: 2rem;
+	color: #71c2cc;
+	font-weight: 700;
+}
+
+.current-price {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.price-change {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.stock-info .up {
+	color: #aee931;
+}
+
+.stock-info .down {
+	color: #d75650;
+}
+
+button {
+	font: inherit;
+	cursor: pointer;
+	background-color: #0054c4;
+	border: 1px solid #0054c4;
+	color: #fefeff;
+	padding: 0.75rem 1.75rem;
+	border-radius: 6px;
+	font-size: 1.5rem;
+	box-shadow: 0 6px 20px rgba(0,118,255,0.23);
+}
+
+button:hover,
+button:active {
+	background-color: #1f64c1;
+	border-color: #1f64c1;
+}
