@@ -1,5 +1,4 @@
-const DEV = 'http://localhost:8000/api/'
-const PROD = 'https//randomstocknse.herokuapp.com/'
+const DEV = 'http://localhost:8000/'
 
 export const fetchRandomStock = async () => {
 	const endpoint = 'api/random/'

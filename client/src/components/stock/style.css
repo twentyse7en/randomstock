@@ -23,6 +23,13 @@ header {
 	padding: 35px;
 }
 
+@media (max-width: 570px) {
+	.stock-info {
+		height: 65%;
+		padding: 7%;
+	}
+}
+
 .price-info {
 	text-align: left;
 }

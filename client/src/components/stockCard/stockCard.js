@@ -7,7 +7,7 @@ import './style.css';
 const StockCard = () => {
 
 	const [stockData, setStockData] = useState({});
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState();
 
 	const updateStockHandler = async () => {
