@@ -6,3 +6,21 @@
 	justify-content: center;
 }
 
+footer {
+	position: absolute;
+	bottom: 5px;
+	color: #0054c4;
+	font-size: 1.25rem;
+}
+
+footer a {
+	text-decoration: None;
+	color: #0054c4;
+	font-weight: 700;
+	font-style: italic;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
