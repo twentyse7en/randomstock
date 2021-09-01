@@ -11,10 +11,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l3wp0#o^!ini892s1p8-8lwf0n7k6d+5if)+@-oc7y0jf2vl83'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -73,11 +73,11 @@ WSGI_APPLICATION = 'stockpicker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd1fcdv6sib7mgv',
-        'USER': 'smorortmbdkwjn',
-        'PASSWORD': 'ecc373af6fd481ff3d009d46ee00e24afc67ac081493d2dc79cd8bc8ee40d175',
-        'HOST': 'ec2-18-211-41-246.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getend('DB_PORT'),
     }
 }
 

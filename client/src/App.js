@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <StockCard />
-	  <footer>
-		Made by <a href="https://github.com/twentyse7en/">twentyse7en</a>🚀
-	  </footer>
+      <footer>
+        Made by <a href="https://github.com/twentyse7en/randomstock">twentyse7en</a>🚀
+      </footer>
     </div>
   );
 }
