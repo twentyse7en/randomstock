@@ -1,4 +1,5 @@
 .env
+Pipefile.lock
 
 *.log
 local_settings.py
